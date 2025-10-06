@@ -1,0 +1,19 @@
+Times:
+
+10 simulations: 0m0.026s
+100 simulations: 0m0.027s
+1000 simulations: 0m0.033s
+10000 simulations: 0m0.187s
+100000 simulations: 0m0.807s
+1000000 simulations: 0m7.876s
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+
+With a small number of simulations for the 2018 Mens World Cup, it did not give France any chance of winning. But as the number of simulations increased, France's chances only grew by a little.
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?:
+
+It seems like the predictions stabilized before running 1000000 simulations. For predictions that are good enough, I think running 100 simulations would be best. It does not take long to receive results and it gives the most accurate predictions based on running N number of simulations
