@@ -1,0 +1,2 @@
+1. Through calculating the average energy, valence, and danceability of a person's top 100 songs, their audio aura comes to 1.859963.
+2. The calculated aura might not be representative of the listener as it does not take into account the tempo of the song. A person could enjoy a fast-paced or slow-paced song. A better way of calculating the aura would be to figure out of comes more frequent rather then using the most frequent numbers to find the average energy, valence, danceability, tempo, etc.
