@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: I know this as since merge sort has already been declared I only have bubble sort and selection sort. Bubble sort is able to sort faster than selection sort when the items are already sorted as it does not need to switch any of the pair of numbers
+
+sort2 uses: Merge Sort
+
+How do you know?: I know this as since merge sort is n log n and selection sort and bubble sort are n squared, I can draw the conclusion that merge sort should be faster than the other two. After testing each sort on the random5000.txt file, I am able to determine that sort2 is the fastest.
+
+sort3 uses: Selection Sort
+
+How do you know?: I know as merge sort and bubble sort has already been declared
