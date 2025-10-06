@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+
+                <h3>What year was Harvard founded?</h3>
+                <button id = "wrong"> 1776 </button>
+                <button id = "wrong"> 1867 </button>
+                <button id = "correct"> 1636 </button>
+                <button id = "wrong"> 1597 </button>
+
+                <p id = "feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+
+                <h3>In which city is the Burj Khalifa found in?</h3>
+                <form>
+                    <input autofocus type = "text">
+                    <button id = "submit">Submit</button>
+
+                    <p id = "feedback2"></p>
+                </form>
+                <script>
+                    // TODO: Add code to check answers to questions
+                    // Checks if correct answer is clicked
+                    document.querySelector("#correct").addEventListener("click", displayCorrect);
+                    function displayCorrect()
+                    {
+                        let correct = document.querySelector("#correct");
+                        // Changes button colour to green and displays correct
+                        correct.style.backgroundColor = "green";
+                        document.querySelector("#feedback1").innerHTML = "Correct";
+                    }
+                    // Checks if incorrect answer is clicked
+                    document.querySelector("#wrong").addEventListener("click", displayIncorrect);
+                    function displayIncorrect()
+                    {
+                        let incorrects = document.querySelectorAll("#wrong");
+                        for (let i = 0; i < incorrects.length; i++)
+                        {
+                            incorrects[i].addEventListener("click", function() {
+                                // Changes button colour to red and displays incorrect
+                                incorrects[i].style.backgroundColor = "red";
+                                document.querySelector("#feedback1").innerHTML = "Incorrect";
+                            });
+                        }
+                    }
+                    // Checks if submit is clicked
+                    document.querySelector("#submit").addEventListener("click", response)
+                    function response()
+                    {
+                        let input = document.querySelector("input");
+
+                        // Determines if user answer was correct
+                        if (input.value == "Dubai")
+                        {
+                            // Displays correct and changes button colour to green
+                            document.querySelector("#feedback2").innerHTML = "Correct";
+                            input.style.backgroundColor = "green";
+                        }
+                        else
+                        {
+                            // Displays incorrect and changes button to red
+                            document.querySelector("#feedback2").innerHTML = "Incorrect";
+                            input.style.backgroundColor = "red";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
