@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    E-Transfer
+{% endblock %}
+
+{% block main %}
+        <form action="/transfer" method="post">
+            <div>
+                <div class="mb-3">
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username"  name="username" placeholder="Your Username" type="text">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Your Password" type="Password">
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="mb-3">
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="accountnumber"  name="accountnumber" placeholder="Receiver Account Number" type="text">
+                </div>
+                <div class="mb-3">
+                    <input autocomplete="off" class="form-control mx-auto w-auto" id="amount" name="amount" placeholder="Amount ($)" type="text">
+                </div>
+                <button class="btn btn-primary" type="submit" id="submit">Send</button>
+            </div>
+        </form>
+{% endblock %}

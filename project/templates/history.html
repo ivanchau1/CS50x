@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Sender</th>
+                <th scope="col">Receiver</th>
+                <th scope="col">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{row["time"]}}</td>
+                <td>{{row["sender"]}}</td>
+                <td>{{row["receiver"]}}</td>
+                <td name="amount-cell">{{row["amount"]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        var amountCells = document.getElementsByName("amount-cell");
+
+        for (let i = 0; i < amountCells.length; i++)
+        {
+            let amountValue = parseFloat(amountCells[i].textContent.replace('$', '').trim());
+            if (amountValue > 0)
+            {
+                amountCells[i].style.color = "green";
+            }
+            else
+            {
+                amountCells[i].style.color = "red";
+            }
+        }
+    </script>
+{% endblock %}

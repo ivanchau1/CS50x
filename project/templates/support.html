@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Contact Support
+{% endblock %}
+
+{% block main %}
+<form action="/support" method = "post">
+    <div class="supportInput">
+        <div class="mb-3">
+            <label for="floatingInput">Email address</label>
+            <input type="email" autocomplete="off" class="form-control" id="email" name="email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="floatingPassword">Name</label>
+            <input type="text" autocomplete="off" class="form-control" id="name" name="name" placeholder="Name">
+        </div>
+        <div class="mb-3">
+            <label for="floatingTextarea2">Description</label>
+            <textarea class="form-control" placeholder="Enter text here" id="description" name="description" style="height: 300px"></textarea>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+{% endblock %}
